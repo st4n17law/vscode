@@ -342,7 +342,7 @@ h1 em, h2 em { font-family: Georgia, serif; font-weight: 400; }
   .orb-two { right: -20px; }
   .metric-card { right: 16px; bottom: 26px; width: 190px; }
   .metric-card strong { font-size: 26px; white-space: nowrap; }
-  .model-card { top: 66px; right: 16px; width: 190px; min-height: 68px; }
+  .model-card { top: 66px; right: 16px; width: 160px; min-height: 68px; }
   .proof { display: none; }
   .section { padding: 80px 0; }
   .row-heading { align-items: start; }
