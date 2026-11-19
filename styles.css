@@ -70,7 +70,7 @@ h1 em, h2 em { font-family: Georgia, serif; font-weight: 400; }
 .status-pill span { width: 6px; height: 6px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 8px var(--lime); }
 .proof { height: 130px; border-top: 1px solid var(--line); display: grid; grid-template-columns: 180px 1fr; align-items: center; }
 .proof p { font-size: 12px; color: var(--muted); }
-.logo-row { display: flex; justify-content: space-between; align-items: center; color: #777b72; }
+.logo-row { display: flex; justify-content: space-evenly; align-items: center; color: #777b72; }
 .logo-row span { font: 600 15px "Manrope"; }
 .logo-row span:nth-child(3) { font-family: Georgia, serif; font-size: 19px; }
 .logo-dot { color: var(--lime); margin-left: 2px; }
