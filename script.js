@@ -24,12 +24,29 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
 
-const form = document.querySelector('#contact-form');
-const formStatus = document.querySelector('.form-status');
+const speakerGrid = document.querySelector('#speaker-grid');
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const name = new FormData(form).get('name');
-  formStatus.textContent = `Спасибо${name ? `, ${name}` : ''}! Мы свяжемся с вами в ближайшее время.`;
-  form.reset();
-});
+if (speakerGrid) {
+  speakerGrid.replaceChildren();
+
+  const columns = 14;
+  const rows = 14;
+
+  for (let row = 0; row < rows; row += 1) {
+    for (let column = 0; column < columns; column += 1) {
+      const cell = document.createElement('span');
+      cell.className = 'grid-speaker-cell';
+      cell.style.left = `${(column * 100) / columns}%`;
+      cell.style.top = `${(row * 100) / rows}%`;
+      speakerGrid.appendChild(cell);
+
+      cell.addEventListener('mouseenter', () => {
+        cell.classList.add('is-hovered');
+      });
+
+      cell.addEventListener('mouseleave', () => {
+        cell.classList.remove('is-hovered');
+      });
+    }
+  }
+}
