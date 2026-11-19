@@ -336,11 +336,12 @@ h1 em, h2 em { font-family: Georgia, serif; font-weight: 400; }
   h2, .section-heading h2 { font-size: 46px; letter-spacing: -3px; }
   .hero { min-height: auto; }
   .hero-actions { align-items: flex-start; flex-direction: column; }
-  .hero-visual { height: 360px; }
+  .hero-visual { height: 500px; }
   .hero-visual { background: radial-gradient(circle at 50% 48%, #dfeab7 0, #aebc91 34%, #718168 72%, #526150 100%); }
   .orb-one { width: 220px; height: 220px; left: 50%; top: 70px; transform: translateX(-50%); }
   .orb-two { right: -20px; }
   .metric-card { right: 16px; bottom: 26px; width: 190px; }
+  .metric-card strong { font-size: 26px; white-space: nowrap; }
   .model-card { top: 66px; right: 16px; width: 190px; min-height: 68px; }
   .proof { display: none; }
   .section { padding: 80px 0; }
