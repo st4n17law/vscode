@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=mobile-model-160">
+  <link rel="stylesheet" href="styles.css?v=consent-inline">
 </head>
 <body>
   <header class="nav-wrap">
@@ -104,9 +104,9 @@
         <article class="service-card reveal product-card">
           <span class="card-number">03</span>
           <div class="product-art combo-art"><span class="combo-speaker"></span><span class="combo-headunit"></span></div>
-          <h3>Комплекты и монтаж</h3>
-          <p>Готовые решения с профессиональной установкой и настройкой в одном месте.</p>
-          <a href="#contact">Заказать комплект <span>↗</span></a>
+          <h3>Готовые комплекты</h3>
+          <p>Подобранные сочетания динамиков и магнитол для сбалансированного звука в вашем авто.</p>
+          <a href="#contact">Подобрать комплект <span>↗</span></a>
         </article>
       </div>
     </section>
@@ -168,9 +168,15 @@
           <input type="hidden" name="_subject" value="Новая заявка с сайта GRACE&POWER">
           <input type="hidden" name="_template" value="table">
           <label>Имя<input type="text" name="name" placeholder="Ваше имя" required></label>
-          <label>Телефон или Telegram<input type="text" name="contact" placeholder="Как с вами связаться" required></label>
-          <label>Марка и модель<textarea name="message" rows="2" placeholder="Например: Toyota Camry 2021"></textarea></label>
-          <button class="button button-light" type="submit">Отправить заявку <span>↗</span></button>
+          <label>Телефон<input type="text" name="contact" placeholder="Как с вами связаться" required></label>
+          <label>Марка и модель<input type="text" name="message" placeholder="Например: Toyota Camry 2021"></label>
+          <label class="consent" for="consent">
+            <span class="consent-checkbox">
+            <input type="checkbox" id="consent" name="consent" value="yes" required>
+            </span>
+            <span class="consent-text">Согласие на <a href="soglasie-na-obrabotku-pd.html" target="_blank" rel="noopener noreferrer">обработку персональных данных</a></span>
+          </label>
+          <button class="button button-light" type="submit" disabled>Отправить заявку <span>↗</span></button>
         </form>
       </div>
     </section>
@@ -189,9 +195,20 @@
         <a href="tel:+79173082959" aria-label="Позвонить Гамлету по номеру +7 917 308-29-59"><span>Гамлет</span><i>·</i><strong>+7 917 308-29-59</strong></a>
       </div>
     </div>
+    <nav class="footer-legal" aria-label="Юридические документы">
+      <a href="politika-konfidencialnosti.html">Политика конфиденциальности</a>
+      <a href="polzovatelskoe-soglashenie.html">Пользовательское соглашение</a>
+      <a href="politika-cookie.html">Политика cookie</a>
+      <a href="soglasie-na-obrabotku-pd.html">Согласие на обработку персональных данных</a>
+    </nav>
   </footer>
 
-  <script src="script.js?v=email-form-submit"></script>
+  <div class="cookie-banner" id="cookie-banner" hidden>
+    <p>Сайт использует файлы cookie, чтобы работать корректно. Продолжая пользоваться сайтом, вы соглашаетесь с <a href="politika-cookie.html">политикой использования cookie</a>.</p>
+    <button type="button" id="cookie-accept">Согласен</button>
+  </div>
+
+  <script src="script.js?v=legal-consent"></script>
   <script>
     (() => {
       const speaker = document.querySelector('.speaker-hero');

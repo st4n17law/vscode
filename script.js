@@ -50,3 +50,27 @@ if (speakerGrid) {
     }
   }
 }
+
+const consentBox = document.querySelector('#contact-form input[name="consent"]');
+const submitButton = document.querySelector('#contact-form button[type="submit"]');
+
+if (consentBox && submitButton) {
+  const syncConsent = () => {
+    submitButton.disabled = !consentBox.checked;
+  };
+  consentBox.addEventListener('change', syncConsent);
+  syncConsent();
+}
+
+const cookieBanner = document.getElementById('cookie-banner');
+const cookieAccept = document.getElementById('cookie-accept');
+
+if (cookieBanner && cookieAccept) {
+  if (localStorage.getItem('cookie-consent') !== 'accepted') {
+    cookieBanner.hidden = false;
+  }
+  cookieAccept.addEventListener('click', () => {
+    localStorage.setItem('cookie-consent', 'accepted');
+    cookieBanner.hidden = true;
+  });
+}
